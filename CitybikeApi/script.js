@@ -2,7 +2,6 @@ let container=document.querySelector('.container');
 
 function getCitybikeData(data) {
    
-   
     let row = document.createElement('div');
     row.classList.add('row');
 
@@ -36,7 +35,7 @@ function getCitybikeData(data) {
   
 async function fetchData(){
     try{
-        let responce= await fetch(`http://api.citybik.es/v2/networks`)
+        let responce= await fetch(`https://api.citybik.es/v2/networks`)
         let data = await responce.json();
         getCitybikeData(data);
 
